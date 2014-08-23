@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Antistatique presentation</title>
+  <title>Generate Styleguides for Every Project</title>
 
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -39,21 +39,6 @@
       border: none;
       box-shadow: 0 0 0 transparent;
     }
-
-    .member{
-      display:inline-block;
-      text-align: left;
-      padding: 1em;
-    }
-    .member .photo{
-      max-width: 200px;
-    }
-    .member h4, .member p{
-      font-size: 16px;
-      margin: 0;
-    }
-
-
   </style>
 
     <!--[if lt IE 9]>
@@ -69,101 +54,346 @@
       <div class="slides">
 
         <section>
-          <div class="antistatique">
-            <object data='assets//logo-antistatique.svg' style='height:80px; width:400px;' ></object>
-          </div>
-          <h5>A brief presentation</h5>
+          <h1>Generate Styleguides for Every Project</h1>
+          <aside class="notes">
+            Welcome to my presentation about having a generated styleguide as a living documentation for every project.
+          </aside>
         </section>
 
+        <!-- Antistatique -->
         <section>
           <section>
-            <h3>Antistatique is a swiss web agency providing handcrafted solutions</h3>
-            <p><object data='assets/github.svg' style='height:50px; width:50px;' ></object> <a href="https://github.com/antistatique" title="GitHub">github.com/antistatique</a></p>
-            <p><object data='assets/twitter.svg' style='height:50px; width:50px;' ></object> <a href="https://twitter.com/antistatique" title="Antistatique (antistatique) auf Twitter">@antistatique</a></p>
+            <h2>Marc Friederich</h2>
+            <h4>
+              Software designer & co-founder of ...
+            </h4>
+            <p><a href="https://github.com/zufrieden" title="GitHub"><i class="icon-github-sign"></i> github.com/zufrieden</a></p>
+            <p><a href="https://twitter.com/zufrieden" title="Twitter"><i class="icon-twitter-sign"></i> @zufrieden</a></p>
+            <aside class="notes">
+              My name is Marc Friederich. I'm a so-called software designer, meaning the UX guy who code and design. Happy to work with HTML since 15 years. I'm also co-founder of ...
+            </aside>
           </section>
           <section>
-            <h1>Services</h1>
+            <div class="antistatique">
+              <object data='assets//logo-antistatique.svg' style='height:80px; width:400px;' ></object>
+            </div>
+            <h3>swiss web agency</h3>
+            <h6>Digital first / User needs / problem solving / Handcrafted Quality</h6>
+            <p><a href="https://github.com/antistatique" title="GitHub"><i class="icon-github-sign"></i> github.com/antistatique</a></p>
+            <p><a href="https://twitter.com/antistatique" title="Twitter"><i class="icon-twitter-sign"></i> @antistatique</a></p>
+            <aside class="notes">
+              Antistatique. A web agency of about 10 people. Enjoying building digital strategy, web solutions focused on user needs.
+            </aside>
+          </section>
+          <section>
+            <a href="http://slidedeck.io">
+              <img src="img/slidedeck.png">
+            </a>
+            <aside class="notes">
+              You may heard about those 2 products we have : slidedeck.io where you will find this HTML presentation and 3000 others automagically indexed.
+            </aside>
+          </section>
+          <section>
+            <a href="http://devicelab.ch">
+              <img src="img/devicelab.png">
+            </a>
+            <aside class="notes">
+              And Devicelab where I hope you'll come one day to test your applications, web products and newsletters (You'll find more devicelab address on opendevicelab.com). But we are not here to talk about me.
+            </aside>
+          </section>
+        </section>
+
+        <!-- Introduction and Styleguide definition -->
+        <section>
+          <section>
+            <h1><span class="fragment">Awesome</span> <span class="fragment">Generated</span> <span class="fragment">web</span> <span class="fragment">living</span> styleguides</h1>
+            <h2 class="fragment">By default</h2>
+            <aside class="notes">
+              We're here to talk about Styleguides, neat, automated, digital, live. And why it should be the default.
+              Let's start with "styleguide definition" ...
+              But first. Raise your hand who already use webstyleguide ? generated ?
+            </aside>
+          </section>
+          <section>
+            <h2>Styleguides</h2>
+            <blockquote>
+              <p>Web site style guides cover a publication's <span class="fragment highlight-red">visual and technical</span> aspects, along with text. Many style guides are <span class="fragment highlight-red">revised periodically</span> to accommodate changes in conventions and usage.</p>
+              <footer>
+                <small><span class="author"><a href="http://en.wikipedia.org/wiki/Styleguide">Wikipedia</a></span></small>
+              </footer>
+            </blockquote>
+            <aside class="notes">
+              A styleguide is a tool to set standards in how the brand identity is communicated.
+              Important in this definition is "visual and technical" and "revised periodically"
+            </aside>
+          </section>
+          <section data-background="img/newyork_transport_styleguide.jpg">
+            <aside class="notes">
+              You may be familiar with those binders
+              This exemple from the New York transit authority 1970.
+            </aside>
+          </section>
+          <section data-background="img/boy_scouts_logos.png">
+            <aside class="notes">
+              This exemple from US boy scout showing how to use their logo
+            </aside>
+          </section>
+          <section>
+            <h2>What contain a styleguide (CICD)</h2>
             <ul>
-              <li>Web and mobile applications</li>
-              <li>E-commerce</li>
-              <li>E-marketing strategy</li>
+              <li class="fragment">Logo</li>
+              <li class="fragment">Colours</li>
+              <li class="fragment">Fonts</li>
+              <li class="fragment">Copywriting, guidelines</li>
+              <li class="fragment">Tone of voice</li>
+              <li class="fragment">Illustrations, icons</li>
+              <li class="fragment">Photographies</li>
+            </ul>
+            <aside class="notes">
+              A traditionnal styleguide or Corporate identity, corporate design may contain informations about ... and how to use them in context.
+              Basically "a set of rules".
+            </aside>
+          </section>
+          <section data-background="img/lonelyplanet.png">
+            <aside class="notes">THis is the the lonelyplanet exemple</aside>
+          </section>
+          <section data-background="img/lonelyplanet_2.png">
+            <aside class="notes">They provide ready to use components like you could find with bootstrap, foundation, pears etc ..</aside>
+          </section>
+          <section>
+            <h2>Web styelguide</h2>
+            <ul>
+              <li class="fragment">Design pattern</li>
+              <li class="fragment">RWD behaviors</li>
+              <li class="fragment">Browser behaviors</li>
+              <li class="fragment">Libraries dependencies</li>
+              <li class="fragment">Related documentation</li>
+            </ul>
+            <aside class="notes">
+              For a web styleguide, we'd like to demonstrate design pattern, repsonsive behavior.
+              How it react in every browser (progressive enhancement), animations, librariries related actions ...
+              Now what is the best way to produce them ...
+            </aside>
+          </section>
+        </section>
+
+        <!-- Generate styleguide dynamically and its benefit, how we went there -->
+        <section>
+          <section>
+            <h1>
+              Make your life easier
+            </h1>
+            <aside class="notes">
+              make your front end developer life easier !
+            </aside>
+          </section>
+          <section>
+            <h2>What do we try to achieve?</h2>
+            <ul>
+              <li class="fragment">Code consistency</li>
+              <li class="fragment">Efficient collaboration</li>
+              <li class="fragment">Living documentation</li>
+              <li class="fragment">Modular approach</li>
+            </ul>
+            <aside class="notes">
+              Main website with other landing page ... using the same CSS
+              Collaboration with in-house developers, the need for a documentation (which stay up to date).
+              Don't want to go back to PSD for having a client validation
+            </aside>
+          </section>
+          <section data-background="img/kyle_webshaped_1.png">
+            <aside class="notes">
+              I was looking for a solution ...
+              Then I saw this guy in Helsinki ! Kyle is working at Github.
+            </aside>
+          </section>
+          <section data-background="img/kyle_webshaped_2.png">
+            <aside class="notes">
+              Talking about awesomeness
+            </aside>
+          </section>
+          <section data-background="img/kyle_webshaped_3.png">
+            <aside class="notes">
+              With good promise
+            </aside>
+          </section>
+          <section data-background="img/kss.png">
+            <aside class="notes">He actualy build his own tool, (they use it at Github). Which generate a styleguide from the code</aside>
+          </section>
+          <section data-background="img/kss_2.png">
+            <aside class="notes">kss_2</aside>
+          </section>
+          <section data-background="img/kss_3.png">
+            <aside class="notes">kss_3</aside>
+          </section>
+          <section data-background="img/kss_4.png">
+            <aside class="notes">kss_4</aside>
+          </section>
+          <section>
+            <h2>Benefits</h2>
+            <ul>
+              <li>Force you to think by reusable modules</li>
+              <li>Better communication between designers and developers</li>
+              <li>Living generated documentation</li>
+              <li>RWD testing platform</li>
+              <li>A better web !</li>
+            </ul>
+            <aside class="notes">full of benefits</aside>
+          </section>
+          <section>
+            <h2>2 years</h2>
+            <h3>Seeking sustainability</h3>
+          </section>
+          <section data-background="img/styledocco.png">
+            <aside class="notes">styledocco</aside>
+          </section>
+          <section data-background="img/styledocco_2.png">
+            <aside class="notes">styledocco_2</aside>
+          </section>
+          <section data-background="img/kalei.png">
+            <aside class="notes">kalei</aside>
+          </section>
+          <section data-background="img/kalei_2.png">
+            <aside class="notes">kalei_2</aside>
+          </section>
+          <section data-background="img/patternlab.png">
+            <aside class="notes">patternlab</aside>
+          </section>
+          <section data-background="img/patternlab_2.png">
+            <aside class="notes">patternlab_2</aside>
+          </section>
+          <section>
+            <h2>Building our own tool</h2>
+            <ul>
+              <li class="fragment">Markdown syntax</li>
+              <li class="fragment">RWD ready</li>
+              <li class="fragment">Dynamic navigation</li>
+              <li class="fragment">Good looking</li>
             </ul>
           </section>
-          <section fullscreen-img="assets/images/office.jpg">
-            <h1>Team</h1>
-            <div>
-              <div class="member">
-                <div class="photo"><img src="http://antistatique.net/assets/img/team/agz.png"></div>
-                <div class="description">
-                  <h4>Alberto Gomez</h4>
-                  <p>Web Project Manager</p>
-                </div>
-              </div>
-              <div class="member">
-                <div class="photo"><img src="http://antistatique.net/assets/img/team/gde.png"></div>
-                <div class="description">
-                  <h4>Gilles Doge</h4>
-                  <p>Web Software Developer</p>
-                </div>
-              </div>
-              <div class="member">
-                <div class="photo"><img src="http://antistatique.net/assets/img/team/mfh.png"></div>
-                <div class="description">
-                  <h4>Marc Friederich</h4>
-                  <p>Interactive Medias Engineer</p>
-                </div>
-              </div>
-              <div class="member">
-                <div class="photo"><img src="http://antistatique.net/assets/img/team/vgn.png"></div>
-                <div class="description">
-                  <h4>Vincent Gschwindemann</h4>
-                  <p>Web Designer</p>
-                </div>
-              </div>
-              <div class="member">
-                <div class="photo"><img src="http://antistatique.net/assets/img/team/rkr.png"></div>
-                <div class="description">
-                  <h4>Renato Kempter</h4>
-                  <p>Frontend Web Developer</p>
-                </div>
-              </div>
-              <div class="member">
-                <div class="photo"><img src="http://antistatique.net/assets/img/team/ygn.png"></div>
-                <div class="description">
-                  <h4>Yann Gouffon</h4>
-                  <p>Frontend Web Developer</p>
-                </div>
-              </div>
-              <div class="member">
-                <div class="photo"><img src="http://antistatique.net/assets/img/team/spt.png"></div>
-                <div class="description">
-                  <h4>Simon Perdrisat</h4>
-                  <p>Web Software Developer</p>
-                </div>
-              </div>
-            </div>
-
+          <section data-background="img/yss.png">
+            <aside class="notes">Then we built our own tool called : YSS. Same syntax as Kalei</aside>
           </section>
+          <section>
+            <pre>
+              <code data-language="css">
+                /*
+                # Text components
+                ## Titles
+                ````
+                <h1>My title number 1</h1>
+                <h2>My title number 2</h2>
+                <h3>My title number 3</h3>
+                ````
+                */
+
+                h1, h2, h3{
+                color: #262626;
+                font-weight: 700;
+              }
+            </code>
+          </pre>
+        </section>
+        <section data-background="img/yss_demo.png">
+          <aside class="notes">YSS Demo</aside>
         </section>
         <section>
+          <h2>Styleguide only mission</h2>
+          <p></p>
         </section>
+        <section data-background="img/hologram.png">
+          <aside class="notes">Hologram</aside>
+        </section>
+        <section data-background="img/hologram_2.png">
+          <aside class="notes">Hologram</aside>
+        </section>
+        <section data-background="img/hologram_3.png">
+          <aside class="notes">Hologram</aside>
+        </section>
+      </section>
 
+      <!-- Convincend - Use a generated styleguide for your poject -->
+      <section>
         <section>
-
+          <h1>Styleguide by default</h1>
+          <h2 class="fragment">Use a generated living styleguide for your next project!</h2>
         </section>
+      </section>
 
-        <section>
-          <h1>Thank you</h1>
-        </section>
 
-      </div>
+<!--
 
-    </div>
 
-    <script src="assets/revealjs/lib/js/head.min.js"></script>
-    <script src="assets/revealjs/js/reveal.min.js"></script>
 
-    <script>
+
+
+
+
+
+
+-->
+
+
+<!--
+
+
+Convincend ?
+- Use a generated styleguide for your poject
+
+How ?
+- Just type
+$ yo styleguide
+almost ...
+
+Styleguide generator generator
+- present styleguide-generator
+   - Gulp, bower, hologram, holostrap, cortana
+
+We went there by 2 years of Styleguide usage
+- a unique styleguide for multiple CMS, sites... landing pages, newsletters ...
+- Use bootstrap as your base (choose wisely your components, choose your battle)
+
+Process
+- Start with a mockup (styletiles, colors, typos) then adapt bootstrap
+- Use inheritance to every components already in bootstrap
+- Juge the technical dept when there is too much customization
+- then code new modules when needed (question also)
+
+Technicaly
+- Styledocco (+ -)
+- KSS (+ -)
+- Kalei - Style guide (+ -)
+- YSS <- our own (+ -)
+- Hologram (+ -)
+- Hologram + Holostrap + cortana
+- Bower + Gulp + browserSync ...
+
+it's like the future
+
+
+Start with a styleguide
+-->
+
+<section>
+
+</section>
+
+<section>
+
+</section>
+
+<section>
+  <h1>Thank you</h1>
+</section>
+
+</div>
+
+</div>
+
+<script src="assets/revealjs/lib/js/head.min.js"></script>
+<script src="assets/revealjs/js/reveal.min.js"></script>
+
+<script>
 
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
@@ -191,6 +421,5 @@
         });
 
       </script>
-      youpi
     </body>
     </html>

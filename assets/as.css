@@ -46,13 +46,28 @@ body {
   font-size: 3em;
   color: #D40B6B;}
 
-.reveal blockquote{
-  color: #444;
-  font-size: 1.5em;
-  line-height: 1.1em;
+
+.reveal blockquote {
+  border-left: 10px solid #ddd;
+  padding: 0.5em 20px;
+  font-size: 0.8em;
+  quotes: "\201C""\201D""\2018""\2019";
   box-shadow: none;
-  padding: 1em;
+  text-align: left;
 }
+.reveal blockquote:before {
+  color: #ddd;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.reveal blockquote p {
+  display: inline;
+}
+
+
 .reveal section.full-image{
   background-size: cover;
   border:1px solid red;
@@ -137,7 +152,7 @@ body {
   }
 
 
- 
+
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
   border-right-color: #474747; }
@@ -166,7 +181,12 @@ body {
 .reveal .controls div.navigate-down.enabled:hover {
   border-top-color: #7d7d7d; }
 
-
+/*********************************************
+ * VIEW FRAGMENTS
+ *********************************************/
+.reveal .slides section .fragment.highlight-current-red.current-fragment, .reveal .slides section .fragment.highlight-red.visible {
+  color: #D40B6B;
+}
 
 
 /*********************************************
