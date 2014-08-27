@@ -176,10 +176,9 @@
               They want the same design on all the website.
             </aside>
           </section>
-          <section data-transition="linear" data-background="#3F3F3F" data-background-transition="slide">
-            <pre>
-              <code data-language="css">
-                ul.nav-main .nav-sub .nav-sub-top, ul.nav-language .nav-sub .nav-sub-top {}
+          <section>
+            <pre><code data-language="css">
+ul.nav-main .nav-sub .nav-sub-top, ul.nav-language .nav-sub .nav-sub-top {}
               </code>
             </pre>
             <aside class="notes">
@@ -201,7 +200,7 @@
             </aside>
           </section>
           <section>
-            <h2>Trapped</h2>
+            <h2>But How!?</h2>
           </section>
           <section data-background="img/kyle_webshaped_2.png">
             <aside class="notes">
@@ -234,11 +233,11 @@ font-weight: 700;
         <section>
           <h2>Documentation</h2>
           <ul>
-            <li>Force you to think before you code</li>
-            <li>Communication between designers and developers</li>
-            <li>Envolve with your project</li>
-            <li>Testing platform</li>
-            <li>A better web!</li>
+            <li class="fragment">Force you to think before you code</li>
+            <li class="fragment">Communication between designers and developers</li>
+            <li class="fragment">Envolve with your project</li>
+            <li class="fragment">Testing platform</li>
+            <li class="fragment">A better web!</li>
           </ul>
           <aside class="notes">full of benefits.
           Document before you code, help you go modular
@@ -250,7 +249,7 @@ font-weight: 700;
           <aside class="notes">We tried some tool available (styledocco, KSS, KaleyStyleguide) and finally we built our own tool called : YSS</aside>
         </section>
         <section>
-           ... time flyes ...
+           1 year later ...
         </section>
         <section>
           <h2>Hired to produce a web styleguide</h2>
@@ -277,30 +276,291 @@ font-weight: 700;
           <h2>Make it default, make it easy!</h2>
           <h3>Generate a styleguide from a generator</h3>
         </section>
-        <section>
-          <pre>
-            <code>
-              $ yo styleguide
-            </code>
-          </pre>
-        </section>
-        <section data-background="img/yeoman.png">
-          <aside class="notes">yeoman</aside>
-        </section>
-        <section>
-          <h2>What's inside?</h2>
-          <ul>
-            <li>Gulp</li>
-            <li>Bower</li>
-            <li>Bootstrap</li>
-            <li>Hologram</li>
-            <li>Holostrap</li>
-            <li>Cortana</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Demo time</h3>
-        </section>
+
+ <section>
+            <a href="http://yeoman.io/"><img src="img/yo.gif" alt=""></a>
+          </section>
+
+          <section>
+            <pre><code data-language="shell">
+$ npm install -g yo
+$ cd path/to/your/project/directory/
+$ yo recipes
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Bower</h2>
+            <br>
+            <a href="http://bower.io/"><img src="img/bower.png" alt=""></a>
+          </section>
+
+          <section class="text-left">
+            <p>
+              Use bower.json to manage depedencies :
+            </p>
+            <pre><code data-language="shell">
+$ npm install -g bower
+$ cd path/to/your/project/directory/
+$ bower install
+            </code></pre>
+          </section>
+
+          <section>
+            <a href="http://www.browsersync.io/"><img src="img/bs.png" alt=""></a>
+          </section>
+
+          <section>
+            <h2>Gulp</h2>
+            <br>
+            <a href="http://gulpjs.com/"><img src="img/gulp.png" alt=""></a>
+          </section>
+
+          <section class="text-left">
+            <p>
+              Use package.json to manage Gulp module :
+            </p>
+            <pre><code data-language="shell">
+$ cd path/to/your/project/directory/
+$ npm install --save-dev gulp gulp-util
+            </code></pre>
+          </section>
+
+          <section>
+            <p class="text-left">
+              gulpfile.js, import module :
+            </p>
+            <pre><code data-language="javascript">
+var gulp = require('gulp'),
+    $ = require('gulp-load-plugins')(),
+    browserSync = require('browser-sync'),
+    reload = browserSync.reload,
+    runSequence = require('run-sequence');
+            </code></pre>
+          </section>
+
+          <section>
+            <p class="text-left">
+              gulpfile.js, simple task :
+            </p>
+            <pre><code data-language="javascript">
+gulp.task('styles', function() {
+  return gulp.src('assets/sass/main.scss')
+    .pipe($.rubySass())
+      .on('error', $.util.beep)
+      .on('error', $.notify.onError(function (error) {
+        return 'Message to the notifier: ' + error.message;
+      }))
+    .pipe($.autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+    .pipe($.minifyCss())
+    .pipe(gulp.dest('build/css'));
+});
+            </code></pre>
+          </section>
+
+          <section>
+            <p class="text-left">
+              gulpfile.js, separate launcher :
+            </p>
+            <pre><code data-language="javascript">
+gulp.task('serve', ['styles'], function () {
+  browserSync({
+    server: {
+      baseDir: ['styleguide'],
+    },
+    open: false
+  });
+  gulp.watch(['**/*.html'], reload);
+  gulp.watch(['assets/sass/**/*.scss'], function() {
+    runSequence('styles', 'styleguide', reload);
+  });
+});
+
+gulp.task('default', ['clean'], function(cb) {
+  runSequence('vendors', 'styles', 'jshint', 'scripts', 'styleguide', cb);
+});
+            </code></pre>
+          </section>
+
+          <section class="text-left">
+            <p>
+              Easy to run :
+            </p>
+            <pre><code data-language="shell">
+$ gulp
+$ gulp serve
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Hologram</h2>
+            <br><br>
+            <a href="http://trulia.github.io/hologram/"><img src="img/hologram_icon.png" alt=""></a>
+          </section>
+
+          <section>
+            <pre><code data-language="shell">
+$ gem install hologram
+$ cd path/to/your/project/directory/
+$ hologram
+            </code></pre>
+          </section>
+
+          <section class="text-left">
+            <p>
+              hologram_config.yml
+            </p>
+            <pre><code data-language="yml">
+source: ./sass
+
+destination: ./docs
+
+documentation_assets: ./theme
+
+dependencies:
+  - ./build
+
+index: README
+            </code></pre>
+          </section>
+
+          <section class="text-left">
+            <p>
+              button.scss
+            </p>
+            <pre><code data-language="css">
+/*doc
+---
+title: Buttons
+name: a-buttons
+category: Layout - Buttons
+---
+
+Some *markdown* content
+
+```html_example
+<button type="button" class="btn btn-primary">Primary</button>
+```
+*/
+
+.btn {
+  border-radius: 4px;
+  position: relative;
+}
+
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="img/hologram_2.png" alt="">
+          </section>
+
+          <section>
+            <h2>Cortana</h2>
+            <p>
+              <br>
+              <a href="https://github.com/Yago/Cortana">Github</a>
+            </p>
+          </section>
+
+          <section>
+            <img src="/img/cortana.png" alt="">
+          </section>
+
+          <section class="text-left">
+            <p>
+              Bower package
+            </p>
+            <pre><code data-language="shell">
+$ bower install --save-dev Cortana
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="img/styleguide.png" alt="">
+          </section>
+
+          <section class="text-left">
+            <p>
+              hologram_config.yml
+            </p>
+            <pre><code data-language="yml">
+source: assets
+destination: styleguide
+documentation_assets: bower_components/Cortana
+
+custom_markdown: bower_components/Cortana/CortanaMarkdownRenderer.rb
+
+index: README
+dependencies:
+  - build/js
+  - build/css
+  - build/fonts
+
+css_include:
+  - 'css/vendors.css'
+  - 'css/tdh.css'
+
+js_include:
+  - 'js/vendors.min.js'
+  - 'js/main.js'
+
+name_scope: ' - '
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Bootstrap (Sass port)</h2>
+            <br>
+            <a href="http://getbootstrap.com"><img src="img/b3.png" alt=""></a>
+          </section>
+
+          <section>
+            <h2>Holostrap</h2>
+            <p>
+              <br>
+              <a href="https://github.com/Yago/Holostrap">Github</a>
+            </p>
+          </section>
+
+          <section>
+            <pre><code data-language="markdown">
+sass
+├── bootstrap-variables.scss
+├── bootstrap.scss
+├── components
+│   ├── alerts.scss
+│   ├── badges.scss
+│   └── ...
+├── javascript
+│   ├── alert.scss
+│   ├── buttons.scss
+│   └── ...
+├── layout
+│   ├── buttons.scss
+│   ├── tables.scss
+│   └── ...
+├── project-mixins.scss
+├── project-variables.scss
+└── project.scss
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Workflow</h1>
+          </section>
+
+          <section class="text-left">
+            <ol>
+              <li class="fragment"><b>Yeoman</b> scaffolding</li>
+              <li class="fragment">Dependencies managment with <b>npm</b> and <b>Bower</b></li>
+              <li class="fragment">Running tasks and serve with <b>Gulp</b></li>
+              <li class="fragment">Modular styles inside the styleguide</li>
+              <li class="fragment">Build templates</li>
+              <li class="fragment">4 and 5 again and again...</li>
+            </ol>
+          </section>
+
         <section>
           <h2>We need help and feedback</h2>
           <p>Join us on Github</p>
