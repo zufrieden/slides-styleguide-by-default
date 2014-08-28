@@ -112,7 +112,7 @@
         <!-- Introduction and Styleguide definition -->
         <section>
           <section>
-            <h1><span class="fragment">Awesome</span> <span class="fragment">Generated</span> <span class="fragment">web</span> <span class="fragment">living</span> styleguides</h1>
+            <h1>Awesome Generated web living styleguides</h1>
             <h2 class="fragment">By default</h2>
             <aside class="notes">
               We're here to talk about Styleguides, neat, automated, digital, live. And why it should be the default.
@@ -151,90 +151,92 @@
           </section>
           <section data-background="img/lonelyplanet_2.png">
             <aside class="notes">They provide ready to use components like you could find with bootstrap, foundation, pears etc ..
-            And now that we have the same understanding of web styleguides let's look at what problem are we solving ...</aside>
+              And now that we have the same understanding of web styleguides let's look at what problem are we solving ...</aside>
+            </section>
           </section>
-        </section>
 
-        <!-- Generate styleguide dynamically and its benefit, how we went there -->
-        <section>
+          <!-- Generate styleguide dynamically and its benefit, how we went there -->
           <section>
-            <h1>
-              Do we need a styleguide for every project?
-            </h1>
-            <aside class="notes">
-              Do we really need a styleguide for every project ...
-            </aside>
-          </section>
-          <section>
-            <h2>Let's go back 3 years ago ...</h2>
-            <aside class="notes">
-              I'd like to share my own experience and how we came from nothing to styleguide by default
-            </aside>
-          </section>
-          <section data-background="img/staff-antistatique-web.jpg">
-            <aside class="notes">
-              Those 2 guys are the designers, and those 3 there are coding CSS/HTML.
-              We were a team working together on the same code.
-            </aside>
-          </section>
-          <section data-background="img/client_team.jpg">
-            <aside class="notes">
-              Those guys are seriouse !
-              Then we won this big client, a real estate company! They have a website with a search engine, some landing pages and other websites dedicated to estate properties.
-
-            </aside>
-          </section>
-          <section data-background="img/client_website.png">
-            <aside class="notes">
-              They want the same design on all their websites.
-            </aside>
-          </section>
-          <section>
-            <pre>
-              <code>
+            <section>
+              <h1>
+                Do we need a styleguide for every project?
+              </h1>
+              <aside class="notes">
+                Do we really need a styleguide for every project ...
+              </aside>
+            </section>
+            <section>
+              <h2>Let's go back 3 years ago ...</h2>
+              <aside class="notes">
+                I'd like to share my own experience and how we came from nothing to styleguide by default
+              </aside>
+            </section>
+            <section data-background="img/staff-antistatique-web.jpg">
+              <aside class="notes">
+                Those 2 guys are the designers, and those 3 there are coding CSS/HTML.
+                We were a team working together on the same code.
+              </aside>
+            </section>
+            <section data-background="img/client_team.jpg">
+              <aside class="notes">
+                Those guys are serious ! They are smiling
+                Then we won this big client, a real estate company! They have a website with a search engine, some landing pages and other websites dedicated to estate properties.
+              </aside>
+            </section>
+            <section data-background="img/client_website.png">
+              <aside class="notes">
+                They want the same design on all their websites, intranet and digital.
+                So we start by using the same CSS accross all websites
+              </aside>
+            </section>
+            <section>
+              <pre>
+<code>
 ul.nav-main .nav-sub .nav-sub-top, ul.nav-language .nav-sub .nav-sub-top {}
-              </code>
-            </pre>
-            <aside class="notes">
-              9000 lines of CSS, with no documentation, used accross 10 websites.
-              Main website with other landing page ... using the same CSS
-              Collaboration with in-house developers, the need for a documentation (which stay up to date).
-              - we needed to do something
-            </aside>
-          </section>
-          <section>
-            <h2>Needed to be solved?</h2>
-            <ul>
-              <li class="fragment">Code consistency</li>
-              <li class="fragment">Modular approach</li>
-              <li class="fragment">Efficient collaboration</li>
-              <li class="fragment">Living documentation</li>
-              <li class="fragment">Easy testing</li>
-            </ul>
-            <aside class="notes">
-
-            </aside>
-          </section>
-          <section>
-            <h2>But How!?</h2>
-          </section>
-          <section>
-            <img src="img/snow_beach.jpg" alt="">
-            <aside class="notes">
-              I was looking for a solution ...
-              Lost, alone ... seeking north
-            </aside>
-          </section>
-          <section data-background="img/kyle_webshaped_2.png">
-            <aside class="notes">
-              In Helsinki, finland for the webshaped frontend conference, I saw this guy : Kyle ! He is working at Github. He was talking about how cool it is to have a documentation.
-              He caught my interest
-              Let's see how it works
-            </aside>
-          </section>
-          <section>
-            <pre>
-              <code data-language="css">
+</code>
+              </pre>
+              <aside class="notes">
+                When we needed a new component to implement, we were writing new lines, to be sure not to breack anything
+                9000 lines of CSS, with no documentation, used accross 10 websites.
+                Main website with other landing page ... using the same CSS
+                Collaboration with in-house developers, the need for a documentation (which stay up to date).
+                - we needed to do something
+              </aside>
+            </section>
+            <section>
+              <ul>
+                <li>Duplicated code</li>
+                <li class="fragment">Dead code</li>
+                <li class="fragment">Communication problem</li>
+                <li class="fragment">Hard to test</li>
+              </ul>
+              <aside class="notes">
+                CSS copy past
+                Not used code (plugin)
+                Between designers and developpers
+                TESTing browser, RWD
+              </aside>
+            </section>
+            <section>
+              <h2>But How!?</h2>
+            </section>
+            <section>
+              <img src="img/snow_beach.jpg" alt="">
+              <aside class="notes">
+                I was looking for a solution ...
+                Lost, alone ... seeking north
+              </aside>
+            </section>
+            <section data-background="img/kyle_webshaped_2.png">
+              <aside class="notes">
+                In Helsinki, finland for the webshaped frontend conference, I saw this guy : Kyle ! He is working at Github. He was talking about how cool it is to have a documentation.
+                He caught my interest
+                Let's see how it works
+              </aside>
+            </section>
+            <section>
+              <pre>
+<code data-language="css">
 /*
 # Text components
 ## Titles
@@ -247,107 +249,109 @@ h1{
 color: #262626;
 font-weight: 700;
 }
-            </code>
-          </pre>
-          <aside class="notes">
-            You have your documentation with the code (like javadoc)
-            You create a structure with Markdown syntax (like github)
-            This exemple : a title H1.
-          </aside>
+</code>
+            </pre>
+            <aside class="notes">
+              You have your documentation with the code (like javadoc)
+              You create a structure with Markdown syntax (like github)
+              This exemple : a title H1.
+            </aside>
+          </section>
+          <section data-background="img/yss_demo.png">
+            <aside class="notes">
+              The generated documentation from the code shows titles etc ...
+            </aside>
+          </section>
+          <section>
+            <ul>
+              <li>Think before you code</li>
+              <li class="fragment">Communication designers/developers</li>
+              <li class="fragment">Envolve with your project</li>
+              <li class="fragment">Testing platform</li>
+              <li class="fragment">A better web!</li>
+            </ul>
+            <aside class="notes">full of benefits.
+              Document before you code, help you go modular
+              Styleguide first it's a perfect tool to communicate earlyer in the frontend coding process with the designer
+              A styleguide that envolve with your product
+              Testing responsive, accessibility, multiple browser</aside>
+            </section>
+            <section data-background="img/yss.png">
+              <aside class="notes">We tried some tool available (styledocco, KSS, KaleyStyleguide) and finally we built our own tool called : YSS</aside>
+            </section>
+            <section>
+             2 year later ...
+             <aside class="notes">
+               We used our tool for every project we had and start talking about it ....
+             </aside>
+           </section>
+           <section>
+            <h2>Hired to produce a web styleguide</h2>
+            <p>For Switzerland public administration</p>
+            <aside class="notes">
+              We only had to create the styleguide
+            </aside>
+          </section>
+          <section data-background="img/admin.png">
+            <aside class="notes">We had to produce a styleguide for all the administration websites. Meaning a large scale project with many actors</aside>
+          </section>
+          <section data-background="img/hologram.png">
+            <aside class="notes">We choose Hologram because more contributed than our YSS, still on markdown, same documentation syntax, themable.</aside>
+          </section>
+          <section data-background="img/hologram_3.png">
+            <aside class="notes">Now that you saw how useful it is to have a styleguide by default, let's see how easy it is to setup</aside>
+          </section>
         </section>
-        <section data-background="img/yss_demo.png">
-          <aside class="notes">
-          The generated documentation from the code shows titles etc ...
-          </aside>
-        </section>
-        <section>
-          <h2>Documentation</h2>
-          <ul>
-            <li class="fragment">Think before you code</li>
-            <li class="fragment">Communication designers/developers</li>
-            <li class="fragment">Envolve with your project</li>
-            <li class="fragment">Testing platform</li>
-            <li class="fragment">A better web!</li>
-          </ul>
-          <aside class="notes">full of benefits.
-          Document before you code, help you go modular
-          Styleguide first it's a perfect tool to communicate earlyer in the frontend coding process with the designer
-          A styleguide that envolve with your product
-          Testing responsive, accessibility, multiple browser</aside>
-        </section>
-        <section data-background="img/yss.png">
-          <aside class="notes">We tried some tool available (styledocco, KSS, KaleyStyleguide) and finally we built our own tool called : YSS</aside>
-        </section>
-        <section>
-           1 year later ...
-           <aside class="notes">
-             We used our tool for every project we had and start talking about it ....
-           </aside>
-        </section>
-        <section>
-          <h2>Hired to produce a web styleguide</h2>
-          <p>For Switzerland public administration</p>
-        </section>
-        <section data-background="img/admin.png">
-          <aside class="notes">We had to produce a styleguide for all the administration websites. Meaning a large scale project with many actors</aside>
-        </section>
-        <section data-background="img/hologram.png">
-          <aside class="notes">We choose Hologram because more contributed than our YSS, still on markdown, same documentation syntax, themable.</aside>
-        </section>
-        <section data-background="img/hologram_3.png">
-          <aside class="notes">Now that you saw how useful it is to have a styleguide by default, let's see how easy it is to setup</aside>
-        </section>
-      </section>
 
-      <!-- Convincend? - Use a generated styleguide for your poject, but how -->
-      <section>
+        <!-- Convincend? - Use a generated styleguide for your poject, but how -->
         <section>
-          <h1>Styleguide by default</h1>
-          <h2 class="fragment">Use a generated living styleguide for your next project!</h2>
-        </section>
-        <section>
-          <h2>Make it default, make it easy!</h2>
-          <h3>Generate a styleguide from a generator</h3>
-        </section>
-        <section data-transition="none">
-          <img src="img/yo-styleguide_0.png" alt="">
-          <aside class="notes">
-            We use bootstrap as a base for every project, from a small website to a complexe application. It's a good base to start with. Tested in every browser, works well with a ccessibility. Don't reinvent the wheel ;-)
-          </aside>
-        </section>
-        <section data-transition="none">
-          <img src="img/yo-styleguide_1.png" alt="">
-          <aside class="notes">
-            We need also Bower to manage dependencies like bootstrap.
-            It allow us to update the project with ease
-          </aside>
-        </section>
-        <section data-transition="none">
-          <img src="img/yo-styleguide_2.png" alt="">
-          <aside class="notes">
-            Hologram as I showed you earlier.
-            Generate the webstyleguide from the code
-          </aside>
-        </section>
-        <section data-transition="none">
-          <img src="img/yo-styleguide_3.png" alt="">
-          <aside class="notes">
-            We created Holostrap, simply a bootstrap documentation adapted to Hologram. So right out of the box, you have all bootstrap components documented in your styleguide
-          </aside>
-        </section>
-        <section data-transition="none">
-          <img src="img/yo-styleguide_4.png" alt="">
-          <aside class="notes">
-            Then we created Cortana, a nice hologram theme with search capabilities
-          </aside>
-        </section>
-        <section data-transition="none">
-          <img src="img/yo-styleguide.png" alt="">
-          <aside class="notes">
-            And finally Gulp to manage task such as generate CSS from SASS, minimify css, launch hologram, deploy
-          </aside>
-        </section>
-         <section>
+          <section>
+            <h1>Styleguide by default</h1>
+            <h2 class="fragment">Use a generated living styleguide for your next project!</h2>
+          </section>
+          <section>
+            <h2>Make it default, make it easy!</h2>
+            <h3>Generate a styleguide from a generator</h3>
+          </section>
+          <section data-transition="none">
+            <img src="img/yo-styleguide_0.png" alt="">
+            <aside class="notes">
+              We use bootstrap as a base for every project, from a small website to a complexe application. It's a good base to start with. Tested in every browser, works well with a ccessibility. Don't reinvent the wheel ;-)
+            </aside>
+          </section>
+          <section data-transition="none">
+            <img src="img/yo-styleguide_1.png" alt="">
+            <aside class="notes">
+              We need also Bower to manage dependencies like bootstrap.
+              It allow us to update the project with ease
+            </aside>
+          </section>
+          <section data-transition="none">
+            <img src="img/yo-styleguide_2.png" alt="">
+            <aside class="notes">
+              Hologram as I showed you earlier.
+              Generate the webstyleguide from the code
+            </aside>
+          </section>
+          <section data-transition="none">
+            <img src="img/yo-styleguide_3.png" alt="">
+            <aside class="notes">
+              We created Holostrap, simply a bootstrap documentation adapted to Hologram. So right out of the box, you have all bootstrap components documented in your styleguide
+            </aside>
+          </section>
+          <section data-transition="none">
+            <img src="img/yo-styleguide_4.png" alt="">
+            <aside class="notes">
+              Then we created Cortana, a nice hologram theme with search capabilities
+            </aside>
+          </section>
+          <section data-transition="none">
+            <img src="img/yo-styleguide.png" alt="">
+            <aside class="notes">
+              And finally Gulp to manage task such as generate CSS from SASS, minimify css, launch hologram, deploy
+            </aside>
+          </section>
+          <section>
             <a href="http://yeoman.io/"><img src="img/yo.gif" alt=""></a>
             <aside class="notes">
               And because it will takes 2 hours to setup all those tools, We created a Yeoman recipe.
@@ -355,9 +359,9 @@ font-weight: 700;
           </section>
 
           <section>
-            <pre><code data-language="shell">
+<pre><code data-language="shell">
 $ yo styleguide
-            </code></pre>
+</code></pre>
             <aside class="notes">
               Easy as .... this
             </aside>
@@ -370,7 +374,7 @@ $ yo styleguide
           </section>
 
           <section>
-            <pre><code data-language="markdown">
+<pre><code data-language="markdown">
 .
 ├── README.md
 ├── assets
@@ -380,13 +384,13 @@ $ yo styleguide
 ├── node_modules
 ├── package.json
 └── robots.txt
-            </code></pre>
+</code></pre>
             <aside class="notes">
               Here is the structure when Yeoman finished is first setup
             </aside>
           </section>
           <section>
-            <pre><code data-language="markdown">
+<pre><code data-language="markdown">
 assets
 ├── README.md
 ├── doc_assets
@@ -396,15 +400,15 @@ assets
 ├── js
 │   └── FEC14.js
 └── sass
-    ├── FEC14-mixins.scss
-    ├── FEC14-variables.scss
-    ├── FEC14.scss
-    ├── bootstrap-variables.scss
-    ├── bootstrap.scss
-    ├── components
-    ├── javascript
-    └── layout
-            </code></pre>
+├── FEC14-mixins.scss
+├── FEC14-variables.scss
+├── FEC14.scss
+├── bootstrap-variables.scss
+├── bootstrap.scss
+├── components
+├── javascript
+└── layout
+</code></pre>
             <aside class="notes">
               Taking a closer look to the assets directory, you see where you will start to work, changing bootstrap variable and start implementing/documenting your first modular components
             </aside>
@@ -414,7 +418,7 @@ assets
             <p>
               hologram_config.yml
             </p>
-            <pre><code>
+<pre><code>
 source: ./assets
 
 destination: ./styleguide
@@ -422,22 +426,22 @@ destination: ./styleguide
 documentation_assets: ./bower_components/Cortana
 
 dependencies:
-  - ./build
+- ./build
 
 css_include:
-  - 'css/FEC14.css'
+- 'css/FEC14.css'
 
 index: README
-            </code></pre>
+</code></pre>
             <aside class="notes">
               Hologram configuation says. Look at assets folder, generate the styleguide in styleguide folder using Cortana theme
             </aside>
           </section>
 
           <section>
-            <pre><code data-language="shell">
+<pre><code data-language="shell">
 $ gulp serve
-            </code></pre>
+</code></pre>
           </section>
 
           <section>
@@ -453,49 +457,48 @@ $ gulp serve
 
           <section class="text-left">
             <ol>
-              <li class="fragment"><b>Yeoman</b> scaffolding</li>
+              <li><b>Yeoman</b> scaffolding</li>
               <li class="fragment">Dependencies managment with <b>npm</b> and <b>Bower</b></li>
               <li class="fragment">Running tasks with <b>Gulp</b> serve with <b>BrowserSync</b></li>
               <li class="fragment">Modular styles inside the styleguide</li>
-              <li class="fragment">Build templates</li>
-              <li class="fragment">4 and 5 again and again...</li>
+              <li class="fragment">4 again and again...</li>
             </ol>
           </section>
-      </section>
+        </section>
 
-      <!-- project process implications -->
-      <section>
+        <!-- project process implications -->
         <section>
-          <h1>To conclude</h1>
-          <aside class="notes">
-            What I would like you to remember from this talk is ...
-          </aside>
+          <section>
+            <h1>To conclude</h1>
+            <aside class="notes">
+              What I would like you to remember from this talk is ...
+            </aside>
+          </section>
+          <section class="text-left">
+            <ol>
+              <li>Start with a styleguide</li>
+              <li class="fragment">Communicate more often</li>
+              <li class="fragment">Develop future proof</li>
+              <li class="fragment">Think modular first</li>
+              <li class="fragment">Contribute! It's open source!</li>
+            </ol>
+          </section>
+          <section data-background="img/future_friendly.jpg">
+            <h3 style="color:#fff">Give it a try</h3>
+          </section>
         </section>
-        <section class="text-left">
-          <ol>
-            <li>Start with a styleguide</li>
-            <li class="fragment">Better communication tool</li>
-            <li class="fragment">Sustainable development</li>
-            <li class="fragment">Think modular first</li>
-            <li class="fragment">It's open source, contribute!</li>
-          </ol>
-        </section>
-        <section data-background="img/future_friendly.jpg">
-          <h3 style="color:#fff">Give it a try</h3>
-        </section>
-      </section>
 
-      <!-- Thank you -->
-      <section>
+        <!-- Thank you -->
         <section>
-          <h1>Thank you</h1>
-        </section>
-        <section>
-          <h1>Questions?</h1>
-          <p>Find this presentation on <a href="http://slidedeck.io/antistatique" title="None">slidedeck.io/antistatique</a> or <a href="http://antistatique.github.io/slides-styleguide-by-default">antistatique.github.io/slides-styleguide-by-default</a></p>
-        </section>
-        <section>
-          <h3>Sources</h3>
+          <section>
+            <h1>Thank you</h1>
+          </section>
+          <section>
+            <h1>Questions?</h1>
+            <p>Find this presentation on <a href="http://slidedeck.io/antistatique" title="None">slidedeck.io/antistatique</a> or <a href="http://antistatique.github.io/slides-styleguide-by-default">antistatique.github.io/slides-styleguide-by-default</a></p>
+          </section>
+          <section>
+            <h3>Sources</h3>
             <ul>
               <li><a href="https://github.com/tonifisler/generator-styleguide">Yeoman Styleguide Generator</a></li>
               <li><a href="http://trulia.github.io/hologram/">Hologram</a></li>
@@ -505,19 +508,19 @@ $ gulp serve
               <li><a href="http://rizzo.lonelyplanet.com/styleguide">LonelyPlanet Styleguide</a></li>
               <li><a href="http://antistatique.github.io/styleguide">Antistatique Styleguide</a></li>
             </ul>
+          </section>
+
         </section>
 
-      </section>
+      </div>
 
     </div>
 
-  </div>
+    <script src="assets/revealjs/lib/js/head.min.js"></script>
+    <script src="assets/revealjs/js/reveal.min.js"></script>
+    <!-- <script src="assets/rainbow/rainbow.js"></script> -->
 
-  <script src="assets/revealjs/lib/js/head.min.js"></script>
-  <script src="assets/revealjs/js/reveal.min.js"></script>
-  <!-- <script src="assets/rainbow/rainbow.js"></script> -->
-
-  <script>
+    <script>
 
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
