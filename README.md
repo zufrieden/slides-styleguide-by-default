@@ -1,6 +1,6 @@
 Styleguide by default
 =====================
 
-URL : http://antistatique.github.io/slides-styleguide-by-default
+URL : http://zufrieden.github.io/slides-styleguide-by-default
 
 
